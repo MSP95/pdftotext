@@ -7,12 +7,23 @@ defmodule Pdftotext.Mixfile do
       version: "0.0.1",
       elixir: "~> 1.4",
       description: "A simple package to convert .pdf file to .txt using OCR API",
-      
+      package: package(),
       elixirc_paths: elixirc_paths(Mix.env),
       compilers: [:phoenix, :gettext] ++ Mix.compilers,
       start_permanent: Mix.env == :prod,
       aliases: aliases(),
       deps: deps()
+    ]
+  end
+  defp package() do
+    [
+      # This option is only needed when you don't want to use the OTP application name
+      name: "pdftotext",
+      # These are the default files included in the package
+      files: ["lib", "priv", "mix.exs", "README*", "readme*", "LICENSE*", "license*"],
+      maintainers: ["Manish Patil"],
+      licenses: ["Apache 2.0"],
+      links: %{"GitHub" => "https://github.com/MSP95/pdftotext"}
     ]
   end
 
