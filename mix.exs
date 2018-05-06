@@ -22,7 +22,7 @@ defmodule Pdftotext.Mixfile do
       # These are the default files included in the package
       files: ["lib", "priv", "mix.exs", "README*", "readme*", "LICENSE*", "license*"],
       maintainers: ["Manish Patil"],
-      licenses: ["Apache 2.0"],
+      licenses: ["MIT License"],
       links: %{"GitHub" => "https://github.com/MSP95/pdftotext"}
     ]
   end
