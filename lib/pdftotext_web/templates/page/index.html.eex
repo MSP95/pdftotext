@@ -1,0 +1,15 @@
+<div class="jumbotron">
+<%= form_for @conn, page_path(@conn, :handlesubmit), [multipart: true], fn f -> %>
+<div class="form-group">
+    <label>PDF to text Converter</label>
+    <%= file_input f, :pdf, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= submit "Submit", class: "btn btn-primary" %>
+  </div>
+<% end %>
+<div>
+  <%= @result %>
+</div>
+</div>
