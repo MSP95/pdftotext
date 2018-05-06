@@ -20,7 +20,7 @@ defmodule Pdftotext.Mixfile do
       # This option is only needed when you don't want to use the OTP application name
       name: "pdftotext",
       # These are the default files included in the package
-      files: ["lib", "priv", "mix.exs", "README*", "readme*", "LICENSE*", "license*"],
+      files: ["lib", "priv", "mix.exs", "README*", "LICENSE*"],
       maintainers: ["Manish Patil"],
       licenses: ["MIT License"],
       links: %{"GitHub" => "https://github.com/MSP95/pdftotext"}
