@@ -5,6 +5,7 @@ A simple Elixir package to convert .pdf file to .txt using OCR API
 **Module Page:** [hex.pm/packages/pdftotext](https://hex.pm/packages/pdftotext)
 
 > convert(file, key)
+
 This is the main PDF to Text Module.
 
 Converts the given pdf file into text.
