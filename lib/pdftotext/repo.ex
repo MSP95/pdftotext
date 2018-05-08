@@ -1,6 +1,6 @@
 defmodule Pdftotext.Repo do
+  @moduledoc false
   use Ecto.Repo, otp_app: :pdftotext
-
   @doc """
   Dynamically loads the repository url from the
   DATABASE_URL environment variable.

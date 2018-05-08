@@ -1,6 +1,6 @@
 defmodule PdftotextWeb.UserSocket do
   use Phoenix.Socket
-
+  @moduledoc false
   ## Channels
   # channel "room:*", PdftotextWeb.RoomChannel
 

@@ -1,4 +1,5 @@
 defmodule PdftotextWeb.PageController do
+  @moduledoc false
   use PdftotextWeb, :controller
 
   def index(conn, _params) do

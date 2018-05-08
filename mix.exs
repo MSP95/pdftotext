@@ -56,6 +56,8 @@ defmodule Pdftotext.Mixfile do
       {:cowboy, "~> 1.0"},
       {:httpoison, "~> 0.13"},
       {:poison, "~> 3.1"},
+      {:decimal, "~> 1.0"},
+      {:ex_doc, "~> 0.14", only: :dev},
     ]
   end
 

@@ -1,8 +1,23 @@
 defmodule PdfToText do
-  #
+  @moduledoc """
+  This is the main PDF to Text Module.
+  """
+
+  @doc """
+  Converts the given pdf file into text.
+
+  **Parameters:**
+  1. File -> Accepts a Plug.Upload{} struct or a binary of the file.
+  2. Key -> Accepts a key for the OCR API. Get your key here: [OCR API KEY](https://ocr.space/ocrapi)
+
+  **Returns:**
+  > {:ok, result} -> On a successful parse returns this where 'result' is a string containing the contents of the passed file.
+
+  > {:error, error_message, result} -> returns a :error struct with the error_message and the partial result if any.
+
+  """
   def convert(file= %Plug.Upload{}, key) do
     # "file is a plug.Upload struct"
-
     # copying the file to a temporary directory
     File.mkdir("temp")
     tmp_path = "temp/#{file.filename}.pdf"
@@ -24,7 +39,7 @@ defmodule PdfToText do
     end
   end
 
-  def upload(file, key, tmp_path) do
+  defp upload(file, key, tmp_path) do
     # preparing data for post request.
     url = "https://api.ocr.space/parse/image"
     body = {:multipart, [{"filetype", "pdf"}, {:file, tmp_path}]}

@@ -1,5 +1,6 @@
 defmodule PdftotextWeb.Router do
   use PdftotextWeb, :router
+  @moduledoc false
 
   pipeline :browser do
     plug :accepts, ["html"]
